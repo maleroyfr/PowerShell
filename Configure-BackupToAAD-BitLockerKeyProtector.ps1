@@ -1,10 +1,10 @@
 <#
 README
-Script: Backup BitLocker Key Protector to Azure AD
+Script: Backup BitLocker Key Protector to Entra
 Author: Mathieu LEROY
 Date: 2024-08-07
 Description:
-    This script backs up the BitLocker Key Protector for the C: drive to Azure AD.
+    This script backs up the BitLocker Key Protector for the C: drive to Entra.
     It handles errors gracefully and provides meaningful output to the user.
 #>
 
@@ -29,7 +29,7 @@ try {
     # Backup the BitLocker Key Protector to Azure AD
     BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $KeyProtectorId
 
-    Write-Output "BitLocker key protector backed up successfully to Azure AD."
+    Write-Output "BitLocker key protector backed up successfully to Entra."
 }
 catch {
     Write-Output "An error occurred: $_"
